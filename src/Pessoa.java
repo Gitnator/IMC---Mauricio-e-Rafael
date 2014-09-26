@@ -15,6 +15,10 @@ public class Pessoa {
         return (peso / (altura * altura));
     }
 
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+    
     public double getPeso() {
         return peso;
     }
@@ -22,7 +26,7 @@ public class Pessoa {
     public boolean setPeso(String peso) {
         try {
             double pesoD = Double.parseDouble(peso);
-            if ((pesoD < 0) || (pesoD > 1000)) {
+            if ((pesoD <= 0) || (pesoD > 1000)) {
                 System.out.println("Peso Inválido");
                 return false;
             }
@@ -41,7 +45,7 @@ public class Pessoa {
     public boolean setAltura(String altura) {
         try {
             double alturaD = Double.parseDouble(altura);
-            if ((alturaD < 0) || (alturaD > 1000)) {
+            if ((alturaD <= 0) || (alturaD > 400)) {
                 System.out.println("Altura Inválida");
                 return false;
             }
